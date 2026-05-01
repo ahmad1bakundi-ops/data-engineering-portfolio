@@ -1,0 +1,29 @@
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-de
+    environment:
+      POSTGRES_USER: ahmad
+      POSTGRES_PASSWORD: ahmad123
+      POSTGRES_DB: olist_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ahmad@olist.com
+      PGADMIN_DEFAULT_PASSWORD: ahmad123
+    ports:
+      - "8080:80"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
