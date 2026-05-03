@@ -72,3 +72,16 @@ docker exec -it postgres-de psql -U ahmad -d olist_db
 - [x] Apache Airflow orchestration
 - [x] Data quality branching
 - [x] GCP BigQuery cloud data warehouse
+
+### Week 2 Day 5 — Looker Studio Dashboard
+Live business intelligence dashboard built on top of dbt mart models in BigQuery.
+
+**[View Live Dashboard](https://datastudio.google.com/reporting/aeefb530-f446-448e-963b-70de9d5a871c)**
+
+Charts included:
+- Total Revenue scorecard
+- Total Orders scorecard
+- Revenue by City bar chart
+- Orders by Payment Type pie chart
+- Monthly Revenue Trend line chart
+- City filter for interactive slicing
