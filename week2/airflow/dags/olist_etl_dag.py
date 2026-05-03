@@ -79,9 +79,9 @@ def transform_orders():
     print("Transforming orders...")
     engine = create_engine(DB_CONN)
     df = pd.read_sql('SELECT * FROM orders', engine)
-    df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
-    df['order_delivered_timestamp'] = pd.to_datetime(df['order_delivered_timestamp'])
-    df['order_estimated_delivery_date'] = pd.to_datetime(df['order_estimated_delivery_date'])
+    df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'], format='mixed')
+    df['order_delivered_timestamp'] = pd.to_datetime(df['order_delivered_timestamp'], format='mixed')
+    df['order_estimated_delivery_date'] = pd.to_datetime(df['order_estimated_delivery_date'], format='mixed')
     df['delivery_days'] = (df['order_delivered_timestamp'] - df['order_purchase_timestamp']).dt.days
     df['is_late'] = df['order_delivered_timestamp'] > df['order_estimated_delivery_date']
     df['order_month'] = df['order_purchase_timestamp'].dt.month
