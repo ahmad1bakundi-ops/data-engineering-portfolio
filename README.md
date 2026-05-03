@@ -61,3 +61,14 @@ docker exec -it postgres-de psql -U ahmad -d olist_db
 - [ ] Week 2 — Docker Compose, Airflow, GCP
 - [ ] Week 3 — dbt, BigQuery, Looker Studio
 - [ ] Week 4 — Spark, Kafka, Data Quality
+
+### Week 2 — Orchestration: Apache Airflow + GCP BigQuery
+| File | Description |
+|------|-------------|
+| `week2/airflow/docker-compose.yml` | Airflow stack — webserver, scheduler, postgres |
+| `week2/airflow/dags/olist_etl_dag.py` | Full ETL DAG with data quality checks and BigQuery load |
+
+**Pipeline Flow:**
+- [x] Apache Airflow orchestration
+- [x] Data quality branching
+- [x] GCP BigQuery cloud data warehouse
