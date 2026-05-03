@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: olist
+    project: olist-de-portfolio
+    dataset: olist_dataset
+    tables:
+      - name: orders_transformed
+        description: "Raw transformed orders from the Airflow ETL pipeline"

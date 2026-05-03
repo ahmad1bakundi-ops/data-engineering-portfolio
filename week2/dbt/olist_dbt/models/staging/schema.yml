@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Cleaned and standardised orders from the Airflow pipeline"
+    columns:
+      - name: order_id
+        description: "Unique order identifier"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Customer identifier"
+        data_tests:
+          - not_null
+      - name: order_status
+        description: "Current status of the order"
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['delivered', 'shipped', 'canceled', 'processing']
+      - name: payment_value
+        description: "Total payment amount"
+        data_tests:
+          - not_null
