@@ -1,0 +1,12 @@
+# Secret keys - never commit these
+keys/
+*.json
+*Zone.Identifier
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Data files
+*.csv
