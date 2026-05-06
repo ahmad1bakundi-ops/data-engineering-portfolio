@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: nigeria
+    project: olist-de-portfolio
+    dataset: nigeria_economic
+    tables:
+      - name: raw_indicators
+        description: "Raw Nigerian economic indicators from World Bank API"

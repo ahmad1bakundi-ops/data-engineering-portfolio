@@ -88,3 +88,16 @@ Charts included:
 
 ## CI/CD Status
 ![Pipeline Tests](https://github.com/ahmad1bakundi-ops/data-engineering-portfolio/actions/workflows/pipeline_tests.yml/badge.svg)
+
+## Project 2 — Nigerian Economic Data Pipeline
+Real Nigerian economic data (2010-2024) sourced from the World Bank API.
+
+**[View Live Nigeria Dashboard](https://datastudio.google.com/reporting/7283a1b8-c753-4494-81f7-dd13c646387c)**
+
+Key insights:
+- GDP growth went negative in 2016 (oil crash) and 2020 (COVID)
+- Inflation hit crisis level (33%) in 2024
+- GDP per capita dropped from $3,088 in 2014 to $1,084 in 2024
+- Hardship index peaked in 2020 and 2024
+
+Tech stack: World Bank API, Python, Apache Airflow, GCP BigQuery, dbt, Looker Studio
