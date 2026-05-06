@@ -85,3 +85,6 @@ Charts included:
 - Orders by Payment Type pie chart
 - Monthly Revenue Trend line chart
 - City filter for interactive slicing
+
+## CI/CD Status
+![Pipeline Tests](https://github.com/ahmad1bakundi-ops/data-engineering-portfolio/actions/workflows/pipeline_tests.yml/badge.svg)
